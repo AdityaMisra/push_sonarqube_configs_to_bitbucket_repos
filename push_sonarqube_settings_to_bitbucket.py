@@ -119,7 +119,7 @@ class SonarQubeConfigPusher(object):
         :return:
         """
         sonar_json_content = ''
-        with open('sonar.json', 'r') as f:
+        with open('./sonar_files/sonar.json', 'r') as f:
             sonar_json_content += f.read(100000)
 
         final_sonar_json_content = sonar_json_content % repo_slug
@@ -165,7 +165,7 @@ class SonarQubeConfigPusher(object):
         """
         properties_content = ''
 
-        with open('sonar-project.properties', 'r') as f:
+        with open('./sonar_files/sonar-project.properties', 'r') as f:
             properties_content += f.read(100000)
 
         final_properties_content = properties_content.format(repo_slug, repo_slug, repo_slug, repo_slug, language)
