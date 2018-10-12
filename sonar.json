@@ -1,0 +1,4 @@
+{
+    "sonarHost": "https://sonar.organization.com/",
+    "sonarProjectKey": "%s"
+}
